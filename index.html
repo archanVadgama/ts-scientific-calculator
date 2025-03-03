@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+
+    <!-- custom css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- custom js -->
+    <!-- <script src="assets/js/script.js" type="module"></script> -->
+    <script src="/dist/main.js" type="module" ></script>
+  </head>
+  <body>
+    <!-- START: main calculator -->
+    <div class="calculator">
+      <!-- START: calculator display -->
+      <div class="calculator-display">
+        <!-- START: left side  -->
+        <div class="left-side">
+          <!-- START: full history button -->
+          <button class="history-btn" id="history-btn">
+            <span class="icon-space">
+              <i class="fa-solid fa-clock-rotate-left"></i> </span
+            >History
+          </button>
+          <!-- END: full history button -->
+
+          <!-- START: short history -->
+          <div id="history"></div>
+          <!-- END: short history -->
+        </div>
+        <!-- END: left side  -->
+
+        <!-- START: calculator input -->
+        <input type="text" id="display" disabled autofocus />
+        <!-- END: calculator input -->
+      </div>
+      <!-- END: calculator display -->
+
+      <!-- START: Toast container -->
+      <div id="toast-container"></div>
+      <!-- END: Toast container -->
+
+      <!-- START: Calculatpr buttons -->
+      <div class="calculator-buttons">
+        <!-- START: Row 1 buttons -->
+        <button class="toggle-mode"></button>
+        <button class="button btn-operation active" data-value="radian">
+          Rad
+        </button>
+        <button class="button btn-operation" data-value="degree">Deg</button>
+        <button class="button btn-operation font-large" data-value="π">
+          π
+        </button>
+        <button class="button btn-operation" data-value="%">%</button>
+        <button class="button" id="delete" data-value="D">
+          <span class="icon-color">
+            <i class="fa-solid fa-delete-left"></i>
+          </span>
+        </button>
+        <button class="button font-medium" id="clear" data-value="C">C</button>
+        <!-- END: Row 1 buttons -->
+
+        <!-- START: Row 2 buttons -->
+        <button class="button btn-operation" data-value="(">(</button>
+        <button class="button btn-operation" data-value=")">)</button>
+        <button class="button btn-operation" data-value="sin(">sin</button>
+        <button class="button" data-value="7">7</button>
+        <button class="button" data-value="8">8</button>
+        <button class="button" data-value="9">9</button>
+        <button class="button btn-operation font-large" data-value="÷">
+          ÷
+        </button>
+        <!-- END: Row 2 buttons -->
+
+        <!-- START: Row 3buttons -->
+        <button class="button btn-operation font-medium" data-value="√">
+          √
+        </button>
+        <button class="button btn-operation font-medium" data-value="!">
+          x!
+        </button>
+        <button class="button btn-operation" data-value="cos(">cos</button>
+        <button class="button" data-value="4">4</button>
+        <button class="button" data-value="5">5</button>
+        <button class="button" data-value="6">6</button>
+        <button class="button btn-operation font-large" data-value="×">
+          ×
+        </button>
+        <!-- END: Row 3 buttons -->
+
+        <!-- START: Row 4 buttons -->
+        <button class="button btn-operation" data-value="^ 2">
+          <span>x<sup>2</sup></span>
+        </button>
+        <button class="button btn-operation" data-value="^ 3">
+          <span>x<sup>3</sup></span>
+        </button>
+        <button class="button btn-operation" data-value="tan(">tan</button>
+        <button class="button" data-value="1">1</button>
+        <button class="button" data-value="2">2</button>
+        <button class="button" data-value="3">3</button>
+        <button class="button btn-operation font-large" data-value="-">
+          -
+        </button>
+        <!-- END: Row 4 buttons -->
+
+        <!-- START: Row 5 buttons -->
+        <button class="button btn-operation" data-value="e">e</button>
+        <button class="button btn-operation" data-value="^">
+          <span>x<sup>y</sup></span>
+        </button>
+        <button class="button btn-operation" data-value="log(">log</button>
+        <button class="button" data-value="0">0</button>
+        <button class="button font-large" data-value=".">.</button>
+        <button class="button font-large" id="equals" data-value="=">=</button>
+        <button class="button btn-operation font-large" data-value="+">
+          +
+        </button>
+        <!-- END: Row 5 buttons -->
+      </div>
+      <!-- END: Calculatpr buttons -->
+    </div>
+    <!-- END: main calculator -->
+
+    <!-- START: full history container  -->
+    <div class="full-history-container" id="full-history-container">
+      <!-- START: close button  -->
+      <span id="close-btn">X</span>
+      <!-- END: close button  -->
+      <!-- START: heading  -->
+      <h1 class="heading">Full History</h1>
+      <!-- END: heading  -->
+      <!-- START: full history  -->
+      <div id="full-history"></div>
+      <!-- END: full history  -->
+      <!-- START: clear history button  -->
+      <div class="clear-container">
+        <button class="clear-btn">Clear History</button>
+      </div>
+      <!-- END: clear history button  -->
+    </div>
+    <!-- END: full history container  -->
+  </body>
+</html>
