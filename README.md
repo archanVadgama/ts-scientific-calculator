@@ -7,6 +7,34 @@ A fully functional scientific calculator built using HTML, CSS, and TypeScript. 
 - **CSS** -  Styling and UI design.
 - **TypeScript** - Implements functionalities with strong typing and modular structure.
 
+## Installation and Setup:
+Clone the repository:
+
+```
+git clone https://github.com/your-repository/ts-scientific-calculator.git
+```
+
+Navigate to the project directory:
+
+```
+cd ts-scientific-calculator
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Compile TypeScript:
+
+```
+tsc
+```
+
+Open index.html in a browser to use the calculator.
+
+
 ## File Structure
 
 - assets  
@@ -77,31 +105,3 @@ A fully functional scientific calculator built using HTML, CSS, and TypeScript. 
 - `56 + 69 + 9 - 3`
 - `78 + 90 × 4 - 2 ÷ 23 % 100`
 - `cos( 45 × 78 × sin( 89 - 9 ) )`
-
-## Installation and Setup:
-Clone the repository:
-
-```
-git clone https://github.com/your-repository/ts-scientific-calculator.git
-```
-
-Navigate to the project directory:
-
-```
-cd ts-scientific-calculator
-```
-
-Install dependencies:
-
-```
-npm install
-```
-
-Compile TypeScript:
-
-```
-tsc
-```
-
-Open index.html in a browser to use the calculator.
-
