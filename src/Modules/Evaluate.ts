@@ -186,7 +186,7 @@ export const CalculatorModule = function () {
                 const value1: number | undefined = stack.pop();
 
                 if (value1 === undefined) {
-                    return Error[8].message;
+                    return Error[2].message;
                 }
     
                 // Instance for advance calculation
@@ -226,7 +226,7 @@ export const CalculatorModule = function () {
                 const value1: number | undefined = stack.pop();
     
                 if (value1 === undefined || value2 === undefined) {
-                    return Error[8].message;
+                    return Error[2].message;
                 }
     
                 // Instance for basic calculation

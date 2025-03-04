@@ -169,7 +169,7 @@ export const CalculatorModule = function () {
             else if (typeof token === "string" && SCIENTIFIC_FUNCTIONS.includes(token)) {
                 const value1 = stack.pop();
                 if (value1 === undefined) {
-                    return Error[8].message;
+                    return Error[2].message;
                 }
                 // Instance for advance calculation
                 let advanceCalculate = new AdvanceCalculation(value1);
@@ -207,7 +207,7 @@ export const CalculatorModule = function () {
                 const value2 = stack.pop();
                 const value1 = stack.pop();
                 if (value1 === undefined || value2 === undefined) {
-                    return Error[8].message;
+                    return Error[2].message;
                 }
                 // Instance for basic calculation
                 let basicCalculate = new Calculator(value1, value2);
