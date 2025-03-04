@@ -1,6 +1,6 @@
 // toastModule.ts
 
-let toastTimeout: any;
+let toastTimeout: number;
 
 /**
  * Show a toast message
