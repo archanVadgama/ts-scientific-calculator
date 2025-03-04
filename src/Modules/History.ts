@@ -6,14 +6,24 @@ const MAX_TEXTAREA_HEIGHT: number = 70;
 /**
  * @interface HistoryEntry
 */
-
 interface HistoryEntry {
     key: number;
     expression: string;
     result: string;
 }
 
-const History = {
+// Define the structure of the History object
+interface History {
+    history: HistoryEntry[];
+    setHistory(exp: string, res: string): void;
+    getHistory(): HistoryEntry[];
+    formatHistory(): HTMLDivElement;
+    clearHistory(): void;
+    setHistoryUI(): void;
+}
+
+// History object
+const History: History = {
     
     history: JSON.parse(localStorage.getItem("calculation-history") || "[]") as HistoryEntry[],
 
@@ -53,11 +63,14 @@ const History = {
         const historyContainer: HTMLDivElement = document.createElement("div");
 
         this.history.forEach(entry => {
+
+            // Create elements for the history item
             const historyItem: HTMLDivElement = document.createElement("div");
             historyItem.style.paddingBottom = "9px";
             historyItem.style.marginTop = "9px";
             historyItem.style.borderBottom = "1px solid rgb(204, 202, 202)";
 
+            // Create elements for the expression and result
             const expressionSpan: HTMLSpanElement = document.createElement("span");
             expressionSpan.classList.add("font-medium");
             expressionSpan.innerText = entry.expression;
@@ -93,6 +106,8 @@ const History = {
      * Set the history UI
      */
     setHistoryUI(): void {
+
+        // Get the history button and set the history UI
         const historyBtn = document.getElementById("history-btn") as HTMLElement;
 
         if (this.history.length > 0) {

@@ -2,6 +2,7 @@ const historyDiv = document.getElementById("history");
 const fullHistoryDiv = document.getElementById("full-history");
 const MIN_TEXTAREA_HEIGHT = 28;
 const MAX_TEXTAREA_HEIGHT = 70;
+// History object
 const History = {
     history: JSON.parse(localStorage.getItem("calculation-history") || "[]"),
     /**
@@ -36,10 +37,12 @@ const History = {
     formatHistory() {
         const historyContainer = document.createElement("div");
         this.history.forEach(entry => {
+            // Create elements for the history item
             const historyItem = document.createElement("div");
             historyItem.style.paddingBottom = "9px";
             historyItem.style.marginTop = "9px";
             historyItem.style.borderBottom = "1px solid rgb(204, 202, 202)";
+            // Create elements for the expression and result
             const expressionSpan = document.createElement("span");
             expressionSpan.classList.add("font-medium");
             expressionSpan.innerText = entry.expression;
@@ -68,6 +71,7 @@ const History = {
      * Set the history UI
      */
     setHistoryUI() {
+        // Get the history button and set the history UI
         const historyBtn = document.getElementById("history-btn");
         if (this.history.length > 0) {
             historyBtn.style.display = "block";
