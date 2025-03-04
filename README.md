@@ -11,7 +11,7 @@ A fully functional scientific calculator built using HTML, CSS, and TypeScript. 
 Clone the repository:
 
 ```
-git clone https://github.com/your-repository/ts-scientific-calculator.git
+git clone https://github.com/archanVadgama/ts-scientific-calculator.git
 ```
 
 Navigate to the project directory:
